@@ -1,0 +1,125 @@
+@charset "UTF-8";
+body {
+  background-color: #756e6e;
+  gap: 6.25rem; /* 100px -> 6.25rem */
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 67.5rem; /* 1080px -> 67.5rem */
+  margin: 0 auto;
+}
+.carousel__main-item {
+  position: relative;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.carousel__main-item .main-item__image {
+  width: 100%;
+  background-color: #c50a0a;
+  height: 30.9375rem; /* 495px -> 30.9375rem */
+  overflow: hidden;
+  border-radius: 1.25rem; /* 20px -> 1.25rem */
+}
+.carousel__main-item .main-item__image__img {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  object-fit: cover;
+  border-radius: 1.25rem; /* 20px -> 1.25rem */
+  transition: opacity 0.5s ease-in-out;
+}
+.carousel__main-item .main-item__information {
+  position: absolute;
+  bottom: 1.25rem; /* 20px -> 1.25rem */
+  left: 1.25rem; /* 20px -> 1.25rem */
+  color: #fff;
+}
+.carousel__main-item .main-item__information .main-item__title {
+  font-size: 2rem; /* 32px -> 2rem */
+  font-weight: bold;
+}
+.carousel__main-item .main-item__information .main-item__description {
+  font-size: 1.125rem; /* 18px -> 1.125rem */
+}
+.carousel__main-item .main-item__actions {
+  gap: 1.25rem 0; /* 20px -> 1.25rem */
+}
+.carousel__main-item .main-item__actions .main-item__button {
+  padding: 0.625rem 1.25rem; /* 10px 20px -> 0.625rem 1.25rem */
+  margin-right: 0.625rem; /* 10px -> 0.625rem */
+  border-radius: 0.3125rem; /* 5px -> 0.3125rem */
+  font-size: 1rem; /* 16px -> 1rem */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.carousel__main-item .main-item__actions .main-item__button--primary {
+  background-color: #fff;
+  color: #000;
+}
+.carousel__main-item .main-item__actions .main-item__button--primary:hover {
+  background-color: #ddd;
+}
+.carousel__main-item .main-item__actions .main-item__button--secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 0.0625rem solid #fff; /* 1px -> 0.0625rem */
+}
+.carousel__main-item .main-item__actions .main-item__button--secondary:hover {
+  background-color: #555;
+}
+.carousel .carousel__side-section {
+  flex: 1;
+  margin-left: 1.25rem; /* 20px -> 1.25rem */
+}
+.carousel .carousel__side-section .carousel__side-item {
+  background-color: #756e6e;
+  padding: 0.625rem; /* 10px -> 0.625rem */
+  border-radius: 0.625rem; /* 10px -> 0.625rem */
+  margin-bottom: 0.625rem; /* 10px -> 0.625rem */
+  height: 5rem; /* 80px -> 5rem */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative; /* Це важливо для коректного відображення прогрес-бару */
+}
+.carousel .carousel__side-section .carousel__side-item:hover {
+  background-color: #444;
+}
+.carousel .carousel__side-section .carousel__side-item.active {
+  background-color: #333;
+}
+.carousel .carousel__side-section .carousel__side-item .side-item__img {
+  width: 3.75rem; /* 60px -> 3.75rem */
+  height: 3.75rem; /* 60px -> 3.75rem */
+  border-radius: 0.625rem; /* 10px -> 0.625rem */
+  object-fit: cover;
+  margin-right: 0.625rem; /* 10px -> 0.625rem */
+  z-index: 1;
+  position: relative;
+}
+.carousel .carousel__side-section .carousel__side-item .side-item__info {
+  color: #fff;
+}
+.carousel .carousel__side-section .carousel__side-item .side-item__title {
+  font-size: 1.125rem; /* 18px -> 1.125rem */
+  z-index: 1; /* Забезпечує, щоб заголовок був вище прогрес-бару */
+  position: relative; /* Це дозволяє правильно відображати z-index */
+}
+.carousel .carousel__side-section .carousel__side-item .side-item__progress-bar {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(150, 34, 34, 0.6);
+  border-radius: 0.625rem; /* 10px -> 0.625rem */
+  z-index: 0; /* Прогрес-бар буде під заголовком */
+}

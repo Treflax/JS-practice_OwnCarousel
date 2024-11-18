@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Own slider</title>
+</head>
+
+<body>
+    <!-- .carousel>.carousel__main-item>(.main-item__image>img)+(.main-item__information>(h2.information__title+p.information__description+.information__actions>(button.actions__button+ a.actions__button)))+.carousel__side-section>(.side-section__side-item[data-title][data-image][data-description]>a.side-item__link>(img.side-item__image+.side-item__information>(h3.information__title+p.information__description))) -->
+
+    <div class="carousel">
+        <div class="carousel__main-item">
+            <div class="main-item__image">
+                <img src="" alt="Product Image" class="main-item__img">
+            </div>
+            <div class="main-item__information">
+                <h2 class="main-item__title">Назва товару</h2>
+                <p class="main-item__description">Опис товару</p>
+                <div class="main-item__actions">
+                    <button class="main-item__button">Додати до кошика</button>
+                    <a href="/product-page-url" class="main-item__button">Перейти до товару</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel__side-section">
+            <div class="carousel__side-item active" data-title="1" data-image="" data-description="Опис товару">
+                <a href="#" class="side-item__link">
+                    <img src="#" alt="Product Image" class="side-item__img">
+                    <div class="side-item__info">
+                        <h3 class="side-item__title">1</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel__side-item" data-title="2" data-image="" data-description="Опис товару">
+                <a href="/product-page-url" class="side-item__link">
+                    <img src="path/to/image.jpg" alt="Product Image" class="side-item__img">
+                    <div class="side-item__info">
+                        <h3 class="side-item__title">2</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel__side-item" data-title="3" data-image="" data-description="Опис товару">
+                <a href="/product-page-url" class="side-item__link">
+                    <img src="path/to/image.jpg" alt="Product Image" class="side-item__img">
+                    <div class="side-item__info">
+                        <h3 class="side-item__title">3</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
